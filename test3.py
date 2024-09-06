@@ -36,11 +36,15 @@ for photo in photos:
     otsu_filtered_img = cv2.threshold(gray_scale, 0, 255,
 	    cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
     
-    processed_images = [clahe_filtered_img, otsu_filtered_img]
+    #normailized
+
+
+    processed_images = [clahe_filtered_img, otsu_filtered_img, normalized_filtered_img]
 
     #saving images for viewing
     cv2.imwrite('Parts/post_processed/' + str(photo.split("/")[-1].split(".")[0]) + '_clahe_filtered.png',clahe_filtered_img)
     cv2.imwrite('Parts/post_processed/' + str(photo.split("/")[-1].split(".")[0]) + '_otsu_filtered.png',otsu_filtered_img)
+    cv2.imwrite('Parts/post_processed/' + str(photo.split("/")[-1].split(".")[0]) + '_normalized_filtered.png',normalized_filtered_img)
 
     # pulling text from proccessed images and exporting the data
     for filtered_img in processed_images:
