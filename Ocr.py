@@ -78,8 +78,8 @@ for (photo, value) in total_data_formatted:
         total_data_filtered.append((photo,value))
 
 #print data
-# for (photo,value) in total_data_filtered:
-#     print(str(photo) + " | " +  str(value))
+for (photo,value) in total_data_filtered:
+    print(str(photo) + " | " +  str(value))
 
 #finding matching parts
 for (photo,item) in total_data_filtered:
