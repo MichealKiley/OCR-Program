@@ -1,0 +1,8 @@
+Have the picture go through the initial two filters, 
+the results are then split into 2 piles sorted by a character limiter (EX: if len(x) > 10)
+
+Pile 1 = pictures with good results
+    - checked against SKU db to see matches
+
+Pile 2 = pictures with bad results
+    - rescanned using RGB filters, then sorted into 2 piles once again.
